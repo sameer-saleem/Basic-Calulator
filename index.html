@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      .calculator,table,h1{
+        text-align: center;
+        margin: auto auto;
+      }
+      body {
+        background-color: #ccc;
+        padding: 0;
+        margin: 0;
+      }
+      td {
+        width: 40px;
+        cursor: pointer;
+        background-color: #333;
+        color: #fff;
+      }
+      button{
+        background-color: transparent;
+        border: 0;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <section class="calculator">
+      <div class="container">
+        <div class="calc-inner">
+          <input type="text" id="input" />
+        </div>
+        <table id="table">
+          <tr>
+            <td onclick="getValue('1')">1</td>
+            <td onclick="getValue('2')">2</td>
+            <td onclick="getValue('3')">3</td>
+            <td onclick="getValue('*')">*</td>
+          </tr>
+          <tr>
+            <td onclick="getValue('4')">4</td>
+            <td onclick="getValue('5')">5</td>
+            <td onclick="getValue('6')">6</td>
+            <td onclick="getValue('/')">/</td>
+          </tr>
+          <tr>
+            <td onclick="getValue('7')">7</td>
+            <td onclick="getValue('8')">8</td>
+            <td onclick="getValue('9')">9</td>
+            <td onclick="getValue('+')">+</td>
+          </tr>
+          <tr>
+            <td onclick="getValue('0')">0</td>
+            <td colspan="2" onclick="getTotal()">=</td>
+            <td onclick="getValue('%')">%</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button onclick="clearAll()">CA</button>
+            </td>
+            <td>
+              <button onclick="remove()">C</button>
+            </td>
+            <td onclick="getValue('-')">-</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </body>
+  <script src="app.js"></script>
+</html>
